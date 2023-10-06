@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Slander
+    </title>
+    <style>
+        body{
+            background-color:blanchedalmond;
+        }
+        #title{
+            text-decoration-line:underline ;
+            text-align: center;
+            font-size: 50px;
+        }
+        #button{
+            background-color: grey;
+            border: 5px;
+            border-style: groove;
+            text-decoration: solid;
+            text-decoration-color: white;
+            text-align: center;
+        }
+        #benimg{
+            margin-left: 45%;
+        }
+        #ben{
+            text-align: center;
+        }
+        #suggestions{
+            text-align: center;
+        }
+    </style>
+    <script>
+        
+        function newSlander() {
+            var slanderBox = document.getElementById("button");
+            var randomIndex = Math.floor(Math.random() * 5)
+            slanderBox.innerHTML = `<h1>${slanders[randomIndex]}</h1>`;
+        }
+
+        var slanders = ['Bens mom equals (https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/cd/Wooden_Hoe_JE3_BE3.png/revision/latest/scale-to-width/360?cb=20200226194121)', 
+        'POV Ben https://thebutlercollegian.com/wp-content/uploads/2019/11/Short-people.jpg (Yellow one)', 'Ben sucks at R6 (Tom Clancys Rainbow Six Seige)', 'Ben likes men', 'Bens Arms data:image/jpeg;base64,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']
+    </script>
+</head>
+<body>
+    <div id = title>
+        <h1>
+            Ben Slander!!
+        </h1>
+    </div>
+    <div id="button" onclick="newSlander()">
+        <h1>
+            Click for Ben Slander
+        </h1>
+    </div>
+    <div id = "benimg">
+        <img src="C:\Users\CCorkum\Documents\VS Code File\BenSlander\Ben.png">
+    </div>
+    <div id = "ben">
+        <h2>
+            ^Ben^
+        </h2>
+    </div>
+    <div id = "suggestions">
+        <h3>
+            For more ideas talk to Connor Corkum
+        </h3>
+    </div>
+</body>
+</html>
